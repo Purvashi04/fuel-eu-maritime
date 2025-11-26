@@ -1,0 +1,32 @@
+{
+  "name": "fuel-eu-maritime-backend",
+  "version": "1.0.0",
+  "main": "dist/server/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/infrastructure/server/index.ts",
+    "build": "tsc",
+    "start": "node dist/server/index.js",
+    "test": "jest",
+    "migrate": "psql $DATABASE_URL -f src/infrastructure/db/migrations/001_init.sql && psql $DATABASE_URL -f src/infrastructure/db/migrations/002_seed_routes.sql"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^22.0.0",
+    "@types/supertest": "^2.0.16",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.0",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0"
+  }
+}
