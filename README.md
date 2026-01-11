@@ -42,27 +42,6 @@ The application is designed using **Clean Architecture / Hexagonal Architecture*
 - Built using **React + TypeScript + Vite**.
 - Organized under `src/core` (domain + ports) and `src/adapters` (UI + API).
 
-### **Infrastructure**
-- PostgreSQL database with migration scripts.
-- Express server with modular routers.
-
-backend/
-├── src/
-│ ├── core/ (domain + use cases)
-│ ├── adapters/
-│ │ ├── inbound/http
-│ │ └── outbound/postgres
-│ └── infrastructure/
-│ ├── db/
-│ └── server/
-└── tests/
-frontend/
-├── src/
-│ ├── core/
-│ └── adapters/
-└── vite.config.ts
-
-
 ---
 
 ## 🛠️ Tech Stack
